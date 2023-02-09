@@ -1,0 +1,231 @@
+// IONIC 5 ATTRIBUTES
+
+@mixin inputField {
+    @include item-list();
+    padding: 0 0;
+    --background: #ff;
+    box-shadow: none;
+    --border-radius: 15px;
+}
+@mixin noItemPadding {
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-bottom: 0;
+    --padding-top: 0;
+    --inner-padding-bottom: 0;
+    --inner-padding-start: 0;
+    --inner-padding-end: 0;
+    --inner-padding-top: 0;
+    ion-label {
+        margin: 0;
+    }
+}
+
+[grid-in-item] {
+    ion-row {
+        margin-bottom: 10px;
+        ion-col {
+            border-right: 4px solid $gray;
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+}
+
+@mixin item-list {
+    border-radius: 15px;
+    background: $white;
+    @include shadow();
+    margin-bottom: 10px;
+    padding: 12px 0;
+    margin: 0 0 10px 0;
+    @include bottomMargin();
+     ion-label {
+        margin: 0;
+    }
+
+    .date {
+        color: $secondary;
+        margin-bottom: 10px;
+        text-align: right;
+        font-size: $small;
+        font-weight: $bold;
+    }
+    .title 
+    {
+        font-size: $default;
+        margin-bottom: 10px;
+        font-weight: $bold;
+    }
+    .subheading {
+        opacity: 0.6;
+    }
+    .code {
+        color: $secondary;
+        margin-top: 10px;
+    }
+}
+
+@mixin search-header {
+    width: 250px;
+    --font-size: 12px;
+    --border-radius: 10px;
+    position: absolute;
+    z-index: 99;
+    top: 8px;
+    --background: #eaeef1;
+    --padding-bottom: 0;
+    --padding-top: 0;
+    --box-shadow: none;
+    input {
+        font-size: $small !important;
+        padding: 2px 40px 2px 40px !important;
+    }
+    ion-icon {
+        top: 9px !important;
+        width: 16px !important;
+        height: 16px !important;
+    }
+}
+
+[inputField] {
+    @include inputField();
+    &[readonly] {
+        background: #dfdcce;
+    }
+}
+
+.ion-padding {
+    --padding-start: var(--ion-padding, 10px);
+    --padding-end: var(--ion-padding, 10px);
+    --padding-top: var(--ion-padding, 10px);
+    --padding-bottom: var(--ion-padding, 10px);
+}
+ion-button {
+    margin: 0;
+}
+[no-bg] {
+    background: none;
+    --background: none;
+}
+ion-badge {
+    margin-right: 10px;
+}
+
+[badge] {
+    font-size: 10px;
+    font-weight: $large;
+    padding: 2px 6px;
+    border-radius: 5px;
+    background: $secondary;
+    color: $white;
+}
+
+[w-100] {
+    width: 100%;
+}
+[no-padding] {
+    --padding: 0;
+    padding: 0;
+}
+[no-grid-padding] {
+    --padding: 0;
+    padding: 0;
+}
+[button-small] {
+    height: 30px;
+    font-size: $small;
+}
+[toolbar-blank] {
+    &::after {
+        content: inherit;
+    }
+    --background: none;
+}
+
+[noItemPadding] {
+    @include noItemPadding();
+}
+
+[noItemEnd] {
+    --inner-padding-end: 0;
+}
+
+[noToolbarShadow] {
+    &::after {
+        /* Removes the toolbar shadow. */
+        background: none;
+    }
+}
+
+// [footer-blank] {
+//     &::before {
+//         /* Removes the toolbar shadow. */
+//         background: none;
+//     }
+// }
+
+[footer-blank-shadow] {
+    background: $white;
+    &::before {
+        /* Removes the toolbar shadow. */
+        background-image: none;
+    }
+}
+
+[text-center] {
+    text-align: center;
+}
+
+[mt-3] {
+    margin-top: 15px;
+}
+
+[mb-3] {
+    margin-top: 15px;
+}
+
+[my-3] {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+[mlAuto] {
+    margin-left: auto;
+}
+
+[ion-content-center] {
+    .inner-scroll {
+        @include dCenter;
+    }
+}
+
+[align-center] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+ion-icon {
+    vertical-align: middle;
+}
+
+ion-button {
+    --box-shadow: none;
+}
+
+[img-fluid] {
+    max-width: 100%;
+}
+
+[uppercase] {
+    text-transform: uppercase;
+}
+
+[underline] {
+    text-decoration: underline;
+}
+
+// IONIC 5 ATTRIBUTES END

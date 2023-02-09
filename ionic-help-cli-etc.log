@@ -1,0 +1,120 @@
+For component help in angular (theme and plugin) :
+https://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/
+https://devdactic.com/animations-ionic-app/
+https://ionicthemes.com/tutorials
+
+---------------------------------------
+
+ways to make ionic fast and smooth:
+http://scottbolinger.com/4-ways-to-make-your-ionic-app-feel-native/
+
+-------------------------------
+LET'S START:
+
+install node js first by below mentioned command or go to node.js website and download:
+install node js
+
+-----------------------------
+to install cordova ionic :
+npm install -g cordova ionic
+
+and to update cordova:
+npm install -g cordova@latest
+
+and to update ionic:
+npm install -g ionic@latest
+------------------
+
+create ionic project:
+ionic start appName sidemenu( or whatever you want like: blank or tabs instead of sidemenu )
+
+----------------------
+creating new page:
+ionic g page pageNameHere
+
+and same as above "tabs" of directive or whatever instead of "page"
+
+---------------
+
+installing super tabs:
+npm install ionic2-super-tabs --save
+
+if super super tabs doesnt work and look like unstyled just downgrade the supertab version:
+npm install ionic2-super-tabs@4.1.4
+
+
+-------------------
+
+build ionic on real device:
+
+To build android:
+ionic build android
+
+if its your first time to build on real device:
+ionic cordova run android
+
+and for ios simply replace the "android to ios"
+
+---------------
+
+Rerun the app on device:
+ionic cordova run --livereload, -l
+
+---------------
+
+For help:
+ionic cordova run --help
+
+---------------
+
+adding splash image:
+
+first paste image on resource folder with the same name "splash.png" and run the below command:
+--ionic cordova resources
+
+-------------
+
+to change apk version name or version code
+
+add below mentioned line under the widget tag in config.xml file:
+android-versionCode="100" id="io.ionic.labx" version="0.0.2"
+
+to remove error while loading app in real device (---server error) add below mentioned line under the widget tag in config.xml file:
+<preference name="loadUrlTimeoutValue" value="60000" /> (you can change the value as per your requirment )
+
+---------------------------
+
+HELPFUL LINKS:
+
+css styling: 
+http://letshelloworld.blogspot.in/2016/08/use-ionic-with-jquery.html
+
+
+image pop on click:
+https://github.com/Riron/ionic-img-viewer
+
+swipeable tabs:
+http://www.computools.com/blog/how-to-create-swipe-tabs-in-ionic/
+https://www.joshmorony.com/adding-swipeable-tabs-to-an-ionic-application/
+
+
+google maps:
+https://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/
+
+
+stylish sidemenu sidebar menus : 
+https://market.ionicframework.com/plugins/3d-sidemenu-pack
+
+void back button closing the apps:
+https://www.gajotres.net/ionic-2-3-how-to-manage-hardware-back-button-event-like-a-pro/
+
+back button closing solution on stackoverflow asked by users:
+https://stackoverflow.com/questions/42151944/ionic-2-how-to-handle-the-hardware-back-button-which-checks-confirmation-of-exi
+
+animation introjs for walkthrough animation:
+https://stackoverflow.com/questions/48201970/how-to-implement-walk-through-or-tour-in-ionic-3
+
+------------------------------------------------
+
+animation cards:
+https://javascript.info/https://demo.mobiscroll.com/angular/cards/stacked#
